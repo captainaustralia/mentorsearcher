@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+{% csrf_token %}
+    <input name="title">
+    <select name="tech">
+        {% for i in tech %}
+            <option>{{ i }}</option>
+        {% endfor %}
+    </select>
+    <input type="checkbox" name="search_mentor">
+<button>create request</button>
+</form>
+</body>
+</html>
